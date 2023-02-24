@@ -66,6 +66,7 @@
     if (!audio) return; 
     audio.currentTime = 0; // Ensure the audio element restarts upon successive clicks 
     audio.play();
+    key.classList.add('playing');
     console.log(key);
   });
 
