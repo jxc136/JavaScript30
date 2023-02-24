@@ -60,19 +60,19 @@
 
 <script>
 
-  window.addEventListener('keydown', function(event){
+  const playSound = (event) => {
     const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`)
     const key = document.querySelector(`.key[data-key="${event.keyCode}"]`)
     if (!audio) return; 
     audio.currentTime = 0; // Ensure the audio element restarts upon successive clicks 
     audio.play();
     key.classList.add('playing');
-  });
+  } 
+
 
   // Function to remove styling from a button when audio finishes
   function removeTransition(event) {
     if(event.propertyName !== 'transform') return; // If the event is not a transform event, end the function
-    console.log(event.propertyName)
     this.classList.remove('playing');
   };
 
@@ -81,6 +81,7 @@
     key.addEventListener('transitionend', removeTransition)
   }) 
   
+  window.addEventListener('keydown', playSound);
 
 </script>
 
