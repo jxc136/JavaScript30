@@ -70,6 +70,18 @@
     console.log(key);
   });
 
+  // Function to remove styling from a button when audio finishes
+  function removeTransition(event) {
+    if(event.propertyName !== 'transform') return; // If the event is not a transform event, end the function
+    console.log(event.propertyName)
+  };
+
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => {
+    key.addEventListener('transitionend', removeTransition)
+  }) 
+  
+
 </script>
 
 
