@@ -67,13 +67,13 @@
     audio.currentTime = 0; // Ensure the audio element restarts upon successive clicks 
     audio.play();
     key.classList.add('playing');
-    console.log(key);
   });
 
   // Function to remove styling from a button when audio finishes
   function removeTransition(event) {
     if(event.propertyName !== 'transform') return; // If the event is not a transform event, end the function
     console.log(event.propertyName)
+    this.classList.remove('playing');
   };
 
   const keys = document.querySelectorAll('.key');
