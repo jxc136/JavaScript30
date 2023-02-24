@@ -63,7 +63,7 @@
   window.addEventListener('keydown', function(event){
     const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`)
     if (!audio) return; 
-    console.log(audio)
+    audio.currentTime = 0; // Ensure the audio element restarts upon successive clicks 
     audio.play();
   });
 
