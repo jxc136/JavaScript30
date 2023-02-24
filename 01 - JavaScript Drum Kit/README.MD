@@ -1,4 +1,5 @@
 ![Banner](banner.png)
+
 # Javascript Drum Kit 
 
 A virtual drum kit that users can play with on a webpage. Built upon an existing codebase as part of the[Javascript 30](https://javascript30.com/) challenge. 
